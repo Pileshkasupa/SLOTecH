@@ -7,4 +7,4 @@ Dieses Projekt besteht aus drei Hauptkomponenten:
 - Eine Hintergrundanwendung für das Empfangen und Bearbeiten der eingegangenen Nachrichten von Smart Home Clients
 
 
-* Wurde zusammen mit zwei anderen Personen verfasst; Falls diese Personen hier genannt werden wollen, bitte melden. Ihr wisst bei wem. *
+*Wurde zusammen mit zwei anderen Personen verfasst; Falls diese Personen hier genannt werden wollen, bitte melden. Ihr wisst bei wem.*

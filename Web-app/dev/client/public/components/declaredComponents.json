@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "Lamp",
+    "Title": "Lamp",
+    "Image": "/lamp.png",
+    "Tags": [
+      "Light"
+    ]
+  },
+  {
+    "Id": "4",
+    "Title": "Test",
+    "Image": "/sensor.png",
+    "Tags": [
+      "Lol"
+    ]
+  },
+  {
+    "Id": "Nanoleaf",
+    "Title": "Nanoleaf",
+    "Image": "/lamp.png",
+    "Tags": [
+      "Test"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34031.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sloth.Lib", "Sloth.Lib\Sloth.Lib.csproj", "{7EEB9DEB-3B18-4F12-A99C-C06335D91060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sloth.WebAPI", "Sloth.WebAPI\Sloth.WebAPI.csproj", "{6FB5D277-DCB1-48C4-960B-905915AF88F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EEB9DEB-3B18-4F12-A99C-C06335D91060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEB9DEB-3B18-4F12-A99C-C06335D91060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEB9DEB-3B18-4F12-A99C-C06335D91060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEB9DEB-3B18-4F12-A99C-C06335D91060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB5D277-DCB1-48C4-960B-905915AF88F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB5D277-DCB1-48C4-960B-905915AF88F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB5D277-DCB1-48C4-960B-905915AF88F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB5D277-DCB1-48C4-960B-905915AF88F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12A43DC9-099D-4E4E-B036-6E1F93EDD1D2}
+	EndGlobalSection
+EndGlobal

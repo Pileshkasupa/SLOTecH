@@ -1,0 +1,80 @@
+This documentation has the purpose of showing how to work with svn under this broker. 
+
+Consider that Martin's user has already been saved and it always asks for his password. I am not aware yet how to change that, but I am pretty sure it is dependent on the user which operates the Raspberry Pi. If you create a new user, then it'll supposedly ask for a new pair of username and password to commit with. ADDITIONALLY, you could try the options '--username <username>' and '--password <password>' to specify the user when commiting. Those are option of the 'svn commit' command.
+
+The SVN package probably will ge tupdates in the future, so we need to potentially discuss if we should upgrade the package, when this does happen. Please do NOT upgrade it without discussion, as it may break the functionality; Linux is known for not being stable when packages get upgraded.
+
+Should you need to reinstall or install the svn package again, use the package "subversion" with the apt package manager.
+
+SVN-Respository: https://svn.sg-labs.net/svn/sloth/
+Our SVN-Repository directory for the broker: https://svn.sg-labs.net/svn/sloth/Broker
+
+There is a checkout directory under '~/sloth'. Do NOT checkout somewhere else, to avoid problems with svn and potentially having unsynchronised changes. 
+
+## Syntax:
+
+Checkout: 
+ 
+ svn checkout <REPO/path>
+
+You can checkout directories and files. Those are atleast the important ones we need. 
+Checkout has a short form: 'co'.
+
+Should you need to checkout something to a specific location, use the following syntax:
+ 
+ svn checkout <REPO/path> <localPath>
+
+NOTE: When inspecting the directory you have checked out, you will see the directory '.svn'. Do NOT edit this directory's contents, unless you know what you are doing, said in Linux language.
+
+
+## Branches:
+In the case of needing branches, here is the syntax for creating one:
+ 
+ svn copy <http://example-subversion-server.com/repos/exampl_project/trunk> <http://example-subversion-server.com/repos/exampl_project/branches/new-branch-name> -m "Commit message"
+
+
+## Updating
+Simply said, you should update the local SVN working copy, so it is synched with the repository, before making changes to it. Make sure to run every time before making changes to it. 
+
+ svn update
+
+
+## Making changes to SVN working copy:
+When working with SVN, you have two types of changes: FILE changes & TREE changes. 
+File changes are ones we normally make when editing a file. No big deal.
+Tree changes are ones we explicitly define and edit the tree's structure/hierarchy with. We need to explicitly specify those. They include adding and deleting files or directories, copying files or directories, making new directories, and moving files or directories.
+
+ svn add file_dir_name
+ 
+ svn delete file_dir_name
+ 
+ svn copy file_dir_name copied_file_dir_name
+ 
+ svn move file_dir_name moved_file_dir_name
+ 
+ svn mkdir dir_name
+
+
+## Retrieving information about a working copy:
+When working on local copies, there are svn tools to help your retrieve information about them.
+
+ svn info
+
+'svn info' retrieves you information such as path, svn-url, revision, node-kind and last changed information.
+
+To show the current state of files in our working copies, we use:
+
+ svn status
+
+This gives you an overview of the changes made to the working copy and what files/directories have been modified. The following serves the same purpose, but with more output: 
+ svn status -v 
+
+Not tested yet, but you can use the following to show differences in a file between your current working copy and last commit to the file:
+
+ svn diff <filename>
+
+
+## Commiting: 
+Lastly, we have how to commit the changes from the working copy to the svn repository. 
+
+ svn commit -m 'Commit message'
